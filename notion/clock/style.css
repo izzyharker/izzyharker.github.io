@@ -39,12 +39,14 @@
     background-color: inherit;
     color: inherit;
     font-family: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: rgb(25 25 25);
     color: rgb(206 206 206);
-    height: 90vh;
+    height: 100vh;
     font-family: 'Karla', sans-serif;
     display: flex;
     justify-content: center;
@@ -74,7 +76,7 @@ body {
   }
   
   #am-pm{
-    font-size:16px;
+    font-size:20px;
   }
 }
 
