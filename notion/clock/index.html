@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="clock">
+        <div id="time-wrapper">
+            <div id="time">12:00</div>
+            <div id="am-pm">AM</div>
+        </div>
+    </div>
+</body>
+<script>
+    function updateTime(k) {
+        if (k < 10) return "0" + k
+        else return k
+    }
+
+    function currentTime() {
+        let date = new Date()
+        let hour = date.getHours()
+        console.log(hour)
+
+        let midday = "AM"
+        if (hour > 12) {
+            midday = "PM"
+        }
+        hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12): hour);
+        let minute = updateTime(date.getMinutes())
+        let seconds = updateTime(date.getSeconds())
+
+        document.getElementById("time").innerHTML = hour + ":" + minute + ":" + seconds
+
+        document.getElementById("am-pm").innerHTML = midday
+
+        let t = setTimeout(currentTime, 1000)
+    }
+
+    currentTime()
+</script>
+</html>
