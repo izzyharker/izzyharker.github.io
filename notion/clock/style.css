@@ -44,12 +44,12 @@
 body {
     background-color: rgb(25 25 25);
     color: rgb(206 206 206);
-    width: 100vw;
     height: 100vh;
     font-family: 'Karla', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #time-wrapper {
@@ -65,4 +65,25 @@ body {
 #am-pm {
     display: inline-block;
     font-size: 30px;
+}
+
+/* For screens with width less than or equal to 768px */
+@media screen and (max-width: 768px) {
+  #clock {
+    font-size: 100px;
+  }
+  
+  #am-pm{
+    font-size:10px;
+  }
+}
+
+/* For screens with width less than or equal to 576px */
+@media screen and (max-width: 576px) {
+  #clock {
+    font-size: 80px;
+  }
+  #am-pm{
+    font-size:10px;
+  }
 }
