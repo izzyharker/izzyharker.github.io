@@ -43,6 +43,11 @@
     padding: 0;
 }
 
+#text {
+  width: 0;
+  height: 0;
+}
+
 body {
     background-color: rgb(25 25 25);
     color: rgb(206 206 206);
@@ -69,6 +74,11 @@ body {
     font-size: 30px;
 }
 
+#date {
+  font-size: 30px;
+  text-align: center;
+}
+
 /* For screens with width less than or equal to 768px */
 @media screen and (max-width: 768px) {
   #time {
@@ -77,6 +87,9 @@ body {
   
   #am-pm{
     font-size:20px;
+  }
+  #clock {
+    margin-bottom: 10%;
   }
 }
 
@@ -87,5 +100,8 @@ body {
   }
   #am-pm{
     font-size:16px;
+  }
+  #clock {
+    margin-bottom: 10%;
   }
 }
