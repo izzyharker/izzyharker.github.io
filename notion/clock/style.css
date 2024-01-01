@@ -44,7 +44,7 @@
 body {
     background-color: rgb(25 25 25);
     color: rgb(206 206 206);
-    height: 100vh;
+    height: 90vh;
     font-family: 'Karla', sans-serif;
     display: flex;
     justify-content: center;
@@ -74,7 +74,7 @@ body {
   }
   
   #am-pm{
-    font-size:10px;
+    font-size:16px;
   }
 }
 
@@ -84,6 +84,6 @@ body {
     font-size: 80px;
   }
   #am-pm{
-    font-size:10px;
+    font-size:16px;
   }
 }
