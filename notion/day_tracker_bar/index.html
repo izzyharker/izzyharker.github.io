@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="clock">
-        <div id="time-wrapper">
-            <div id="time">12:00</div>
-            <div id="am-pm">AM</div>
+    <div class="container">
+        <div class="bar-container month-year">
+            <div class="progress box">
+                <div class="progress inner" id="monthyear-inner"></div>
+            </div>
+            <div class="text" id="monthyear-text">1/12 Month</div>
+        </div>
+        <div class="bar-container day-month">
+            <div class="progress box">
+                <div class="progress inner" id="daymonth-inner"></div>
+            </div>
+            <div class="text" id="daymonth-text">3/31 Day</div>
         </div>
     </div>
 </body>
-<script>
-</script>
+<script src="./main.js"></script>
 </html>
