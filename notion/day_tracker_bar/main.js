@@ -29,7 +29,7 @@ function updateBars() {
 
     document.getElementById("daymonth-inner").style.width = `${100 * day/days_in_month}%`
     document.getElementById("monthyear-inner").style.width = `${100 * month/12}%`
-    let t = setTimeout(currentTime, 60000)
+    let t = setTimeout(updateBars, 60000)
 }
 
 updateBars()
