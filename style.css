@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* start with CSS reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    font-family: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    font-family: 'Fira Code', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    font-family: 'Fira Code', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    background: linear-gradient(to right, rgb(0, 0, 0),rgb(42, 0, 159));
+    color: white;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-height: 99vh;
+    width: 100vw;
+    background-color: inherit;
+}
+
+.header {
+    max-height: 2rem;
+    padding: 1rem;
+    flex: 1;
+    margin-left: auto;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    background: inherit;
+    font-size:large;
+    color: inherit;
+}
+
+.custom-underline {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active {
+  text-decoration: none;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+}
+
+.custom-underline {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-underline::after {
+    top: 95%;
+    height: 0.1rem;
+    width: 0%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.25s ease all 0.25s;
+}
+
+.header button:hover .custom-underline::after {
+    width: 90%;
+    transition: 0.25s ease all;
+}
+
+.header .active {
+    background-color: white;
+    color:rgb(0, 0, 197);
+    border-radius: 4px;
+    transition-duration: 500ms;
+}
+
+.content-box {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2rem;
+    display: flex;
+    gap: 4rem;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+    max-height: 100vh;
+}
+
+.content-box .title {
+    flex: 2;
+    text-align: left;
+    font-size: 5rem;
+    margin: auto;
+}
+
+.content-box .title p {
+    font-size: 2rem;
+    padding-top: 0.5rem;
+}
+
+h1 {
+    font-size: inherit;
+}
+
+.content-box .content {
+    flex: 5;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+
+/* This is temporary - will finish home page last*/
+.home {
+    justify-content: center;
+    /* border: 4px solid white; */
+    height: 80vh;
+    width: auto;
+}
+
+/* .home-template {
+    height: 20rem;
+    width: 75%;
+    justify-content: center;
+    border: 4px solid white;
+    border-radius: 10rem;
+    translate: 50%;
+} */
+
+.about {
+    display: flex;
+    gap: 4vh;
+    justify-content: center;
+}
+
+.about .profile_photo {
+    flex: 1;
+    max-height: 50vh;
+    border: 1px solid white;
+}
+
+.profile_photo img {
+    max-height: 50vh;
+    max-width: 100%;
+}
+
+.about .text-content {
+    flex: 1;
+    text-align: left;
+    justify-content: center;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 2rem;
+    max-height: inherit;
+    overflow-y: scroll;
+}
+
+.projects video {
+    max-width: 100%;
+}
+
+.proj {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.video-content {
+    flex: 2;
+    border-radius: 5px;
+}
+
+.text-content {
+    flex: 3;
+}
+
+.proj1 .text-content {
+    text-align: left;
+}
+
+.proj2 .text-content {
+    text-align: right;
+}
+
+.proj h1 {
+    font-weight: bolder;
+}
+
+.text-content p {
+    margin-top: 0.5rem;
+}
+
+.footer {
+    flex: 1;
+    max-height: 2rem;
+    justify-content: bottom;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    padding-bottom: 1%;
+    word-spacing: 0%;
+    font-size: larger;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer button:hover .custom-underline::after {
+    width: 90%;
+    transition: 0.25s ease all;
+}
+
+.webgl {
+    height: 100%;
+    width: 100%;
+}

@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>irh</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code">
+
 </head>
 <body>
-    Hello world
+    <div class="main">
+        <div class="header">
+            <p><button id="homebutton" onclick="switch_content('home')"><a href="#" class="custom-underline">Home</a></button>  · 
+            <button id="aboutbutton" onclick="switch_content('about')"><a href="#" class="custom-underline">About</a></button> · 
+            <button id="projectbutton" onclick="switch_content('projects')"><a href="#" class="custom-underline">Projects</a></button></p>
+        </div>
+        <div class="content-box">
+            <div class="title">
+                <h1>Izzy Harker</h1>
+                <p id># <em id="tagline">creative</em></p>
+            </div>
+            <div class="content">
+                <div class="home">
+                    <canvas class="webgl">
+                        <script type="module" src="./script/torus.js"></script>
+                    </canvas>
+                </div>
+                <div class="about">
+                    <div class="text-content">
+                        <p> I am a junior at the University of Oregon, majoring in Computer Science and Mathematics. My background is broad across both of these disciplines, encompassing many areas of Mathematics, like Abstract Algebra and Number Theory, and Computer Science, from Graphics to Programming Language theory. <br>
+
+                        <br><br>My primary interests (graphics, cybersecurity, and data analysis) all lie in the intersection of math and computer science. I think that the applications of math to seemingly unrelated topics in other domains are fascinating, and it's super exciting to see how mathematics can inform our understanding of the world.
+                        </p>
+                    </div>
+                    <div class="profile_photo">
+                        <img src="./media/profile.jpg" alt="Photo of me">
+                    </div>
+                </div>
+                <div class="projects">
+                        <div class="proj proj1">
+                            <div class="video-content">
+                                <video src="./media/km1.m4v" controls></video>
+                            </div>
+                            <div class="text-content">
+                                <h1>Visualizing the Intersection of a Cubic Surface and a Plane</h1>
+                                <p>Wrote a MATLAB script to calculate and visualize the intersection between a cubic surface and a specific set of planes in 3D space. Communicated and discussed progress regularly with my mentor on the project, promptly incorporated feedback. Summer 2022, funded in part by NSF grant no. DMS-2039316.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="proj proj2">
+                            <div class="text-content">
+                                <h1>Ray Tracing Engine</h1>
+                                <p>Developed a ray tracing engine using CUDA to render objects, included support for cameras and light sources. Implemented light rays and shadows and a spotlight construction. Defined behavior for several object materials, including matte, metal, and transparent glass. Produced a video showing light refracting through a glass pyramid. Winter 2023.
+                                    
+                                </p>
+                            </div>
+                            <div class="video-content">
+                                <video src="./media/raytrace.mp4" controls></video>
+                            </div>
+                        </div>
+                        <!-- <div class="proj proj3">
+                            <div class="text-content">
+                                Coming soon...
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p><button><a href="./media/Isabella_Harker_Resume.pdf" class="custom-underline">Resume</a></button>  · 
+                <button><a href="https://www.linkedin.com/in/isabella-harker/" class="custom-underline">LinkedIn</a></button> · 
+                <button><a href="https://github.com/izzyharker" class="custom-underline">GitHub</a></button></p>
+        </div>
+    </div>
 </body>
+<script src="./script/main.js"></script>
+<script type="module" src="script/torus.js"></script>
 </html>
