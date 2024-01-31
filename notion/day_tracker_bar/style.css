@@ -82,7 +82,8 @@ body {
 
 .inner {
 	background-color: rgb(206 206 206);
-	border-width: 0.5em;
+  border-color: rgb(25 25 25);
+	border-width: 0.15em;
 	border-radius: 0.4em;
 }
 

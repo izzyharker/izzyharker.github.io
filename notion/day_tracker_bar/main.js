@@ -12,6 +12,7 @@ function daysInMonth(m) {
         case 9: return 31
         case 10: return 30
         case 11: return 31
+        default: return 30
     }
 }
 
@@ -22,13 +23,14 @@ function updateBars() {
     let day = date.getDate()
 
     let days_in_month = daysInMonth(month)
+    // console.log(days_in_month)
     month += 1
 
     document.getElementById("daymonth-text").textContent = `Day ${day}/${days_in_month}`
     document.getElementById("monthyear-text").textContent = `Month ${month}/12`
 
-    document.getElementById("daymonth-inner").style.width = `${100 * day/days_in_month}%`
-    document.getElementById("monthyear-inner").style.width = `${100 * month/12}%`
+    document.getElementById("daymonth-inner").style.width = `${99 * day/days_in_month}%`
+    document.getElementById("monthyear-inner").style.width = `${99 * month/12}%`
     let t = setTimeout(updateBars, 60000)
 }
 
