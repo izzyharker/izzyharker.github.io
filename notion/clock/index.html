@@ -55,7 +55,7 @@
         let hour = date.getHours()
 
         let midday = "AM"
-        if (hour > 12) {
+        if (hour >= 12) {
             midday = "PM"
         }
         hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12): hour);
